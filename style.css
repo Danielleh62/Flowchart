@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Prevent scrolling */
+}
+
+.flowchart {
+    text-align: center;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; /* Evenly space the stages vertically */
+    align-items: center;
+}
+
+.stage {
+    width: 25vw; /* Adjusted width to fit more text */
+    height: 25vw; /* Set height equal to width to maintain circular shape */
+    border-radius: 50%;
+    padding: 20px;
+    background-color: #005f99; /* Darker blue */
+    color: white; /* White text for better contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* Stack stage number and list */
+    font-size: 1.2vw; /* Adjust font size */
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    opacity: 0;
+    transform: translateY(50px);
+    animation: fadeIn 1s forwards;
+    transition: all 0.3s ease-in-out;
+    text-align: center; /* Ensure list stays centered */
+}
+
+.stage-number {
+    font-size: 1.5vw;
+    margin-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-weight: normal;
+}
+
+ul li {
+    margin-bottom: 5px;
+    font-size: 1vw;
+}
+
+#stage2 {
+    background-color: #cc5b38; /* Darker orange */
+    animation-delay: 1s;
+}
+
+#stage3 {
+    background-color: #227a22; /* Darker green */
+    animation-delay: 2s;
+}
+
+#stage4 {
+    background-color: #ccac00; /* Darker yellow */
+    animation-delay: 3s;
+}
+
+/* Hover effects */
+#stage1:hover {
+    background-color: #003d66; /* Even darker blue on hover */
+    transform: scale(1.05);
+}
+
+#stage2:hover {
+    background-color: #b34724; /* Darker orange on hover */
+    transform: rotate(5deg);
+}
+
+#stage3:hover {
+    background-color: #165116; /* Darker green on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+}
+
+#stage4:hover {
+    background-color: #997700; /* Darker yellow on hover */
+    transform: scale(1.05) rotate(-5deg);
+}
+
+/* Animation for fading in */
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
