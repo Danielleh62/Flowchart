@@ -6,42 +6,32 @@ body {
     align-items: center;
     height: 100vh;
     margin: 0;
-    overflow: hidden; /* Prevent scrolling */
 }
 
 .flowchart {
     text-align: center;
-    width: 100%;
-    height: 100vh;
+    width: 80%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly; /* Evenly space the stages vertically */
+    gap: 20px;
     align-items: center;
 }
 
 .stage {
-    width: 25vw; /* Adjusted width to fit more text */
-    height: 25vw; /* Set height equal to width to maintain circular shape */
-    border-radius: 50%;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
     padding: 20px;
-    background-color: #005f99; /* Darker blue */
-    color: white; /* White text for better contrast */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column; /* Stack stage number and list */
-    font-size: 1.2vw; /* Adjust font size */
-    font-weight: bold;
+    background-color: #005f99;
+    color: white;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    opacity: 0;
-    transform: translateY(50px);
-    animation: fadeIn 1s forwards;
     transition: all 0.3s ease-in-out;
-    text-align: center; /* Ensure list stays centered */
+    text-align: left;
 }
 
 .stage-number {
-    font-size: 1.5vw;
+    font-size: 1.5em;
+    font-weight: bold;
     margin-bottom: 10px;
 }
 
@@ -53,50 +43,24 @@ ul {
 }
 
 ul li {
-    margin-bottom: 5px;
-    font-size: 1vw;
+    margin-bottom: 8px;
+    font-size: 1em;
 }
 
 #stage2 {
-    background-color: #cc5b38; /* Darker orange */
-    animation-delay: 1s;
+    background-color: #cc5b38;
 }
 
 #stage3 {
-    background-color: #227a22; /* Darker green */
-    animation-delay: 2s;
+    background-color: #227a22;
 }
 
 #stage4 {
-    background-color: #ccac00; /* Darker yellow */
-    animation-delay: 3s;
+    background-color: #ccac00;
 }
 
 /* Hover effects */
-#stage1:hover {
-    background-color: #003d66; /* Even darker blue on hover */
-    transform: scale(1.05);
-}
-
-#stage2:hover {
-    background-color: #b34724; /* Darker orange on hover */
-    transform: rotate(5deg);
-}
-
-#stage3:hover {
-    background-color: #165116; /* Darker green on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-#stage4:hover {
-    background-color: #997700; /* Darker yellow on hover */
-    transform: scale(1.05) rotate(-5deg);
-}
-
-/* Animation for fading in */
-@keyframes fadeIn {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.stage:hover {
+    transform: scale(1.02);
+    background-color: #004470;
 }
